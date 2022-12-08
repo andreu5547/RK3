@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Students exam</title>
+</head>
+
+<body>
+<form method="post">
+    <select name="student" id="student">
+        {% for st in students %}
+        <option>{{ st['student'] }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Получить билеты</button>
+</form>
+
+
+{% if task %}
+<h3>{{ task }}</h3>
+{% endif %}
+</body>
+</html>
